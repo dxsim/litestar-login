@@ -1,2 +1,2 @@
-litestar
+litestar[standard]
 jinja2
