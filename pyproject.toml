@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "litestar-login"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Sim-Xien"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+litestar = {extras = ["standard"], version = "^2.8.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
