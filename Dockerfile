@@ -1,12 +1,12 @@
 # Use an official Python runtime as a parent image
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # Set the working directory
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app except app.py
 COPY requirements.txt /app
-COPY templates /app
+COPY templates/ /app/templates/
 COPY requirements.txt /app
 
 # Install any needed packages specified in requirements.txt
@@ -20,6 +20,7 @@ EXPOSE 8000
 
 # Define environment variable
 ENV PYTHONUNBUFFERED=1
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+ENV LITESTAR_HOST=0.0.0.0
+# Litestar run when the container launches
+CMD ["litestar", "run"]
+# CMD ["litestar --app /app run"]
