@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-litestar = {extras = ["standard"], version = "^2.8.3"}
+litestar = {version = "2.8.3", extras = ["standard"]}
 
 
 [build-system]
