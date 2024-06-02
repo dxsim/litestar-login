@@ -4,9 +4,6 @@ from litestar.template.config import TemplateConfig
 from litestar.response import Template
 from pathlib import Path
 
-# # Initialize the Litestar app with a Jinja template engine
-# app = Litestar(template_engine=JinjaTemplateEngine(directory="templates"))
-
 # Define a route to render the login page
 @get("/")
 async def login_page() -> Template:

@@ -21,6 +21,6 @@ EXPOSE 8000
 # Define environment variable
 ENV PYTHONUNBUFFERED=1
 ENV LITESTAR_HOST=0.0.0.0
+
 # Litestar run when the container launches
 CMD ["litestar", "run"]
-# CMD ["litestar --app /app run"]
